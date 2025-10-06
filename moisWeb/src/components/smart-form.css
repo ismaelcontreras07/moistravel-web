@@ -1,0 +1,103 @@
+:root{
+    --sf-text: var(--principal-color);
+    --sf-muted: #6b7280;
+    --sf-border: #e5e7eb;
+    --sf-card: #efefef;
+    --sf-input: #ffffff;
+    --sf-accent: var(--principal-color);   /* botón oscuro tipo mock */
+    --sf-accent-fg: #ffffff;
+    --sf-danger: #dc2626;
+    --sf-radius: var(--border-radius);
+    --sf-shadow: 0 20px 45px rgba(0,0,0,.06);
+  }
+  
+  .sf{
+    
+    width: 100%;
+    max-width: 600px;
+    margin: 24px auto;
+    padding: 24px;
+    background: var(--sf-card);
+    border-radius: var(--sf-radius);
+    box-shadow: var(--sf-shadow);
+    color: var(--sf-text);
+    box-sizing: border-box;
+  }
+  
+  .sf__title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+  }
+  .sf__desc{
+    color: var(--sf-muted);
+    margin-bottom: 2rem;
+  }
+  
+  .sf__group{ display:grid; gap:8px; margin-bottom: 14px; }
+  .sf__label{ 
+    font-weight: 300; 
+    font-size: .8rem; 
+    margin-bottom: 0.2rem;
+    color: var(--sf-text);
+  }
+  
+  .sf__input{
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--sf-border);
+    border-radius: var(--sf-radius);
+    background: var(--sf-input);
+    color: var(--sf-text);
+    outline: none;
+    transition: box-shadow .15s ease, border-color .15s ease, background-color .2s;
+    box-sizing: border-box;
+  }
+  .sf__input:focus{
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(148,163,184,.25);
+  }
+  .sf__input--error{
+    border-color: var(--sf-danger);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--sf-danger) 25%, transparent);
+  }
+  
+  .sf__textarea{
+    min-height: 120px;
+    padding: 10px 14px;
+    resize: vertical;
+  }
+  
+  /* Placeholder visual para date (cuando type="text") */
+  .sf__input--date{
+    background-image:
+      radial-gradient(circle at right 14px center, transparent 0 18px, transparent 19px),
+      linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+  }
+  
+  .sf__error{
+    color: var(--sf-danger);
+    font-size: .7rem;
+    font-weight: 300;
+  }
+  
+  .sf__btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    margin-top: 18px;
+    border: none;
+    border-radius: var(--sf-radius);
+    background: var(--sf-accent);
+    color: var(--sf-accent-fg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter .2s ease, transform .1s ease;
+  }
+  .sf__btn:hover{ background: var(--secundario-color); transition: background .2s ease; }
+  .sf__btn:active{ transform: translateY(1px); }
+  

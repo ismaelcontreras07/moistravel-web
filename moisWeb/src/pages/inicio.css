@@ -1,0 +1,99 @@
+.tours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 1rem;
+}
+
+.section-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--principal-color);
+}
+
+.property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 3rem;
+}
+
+.line-conatiner {
+    display: flex;  
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.line {
+    width: 120px;
+    height: 3px;
+    border-radius: 10px;
+    margin: 2rem 0;
+    background-color: var(--secundario-color);
+}
+
+.logo-loop-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 3rem auto;
+    justify-content: center;
+    color: transparent;
+    overflow: hidden;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-inline: 1rem;
+    margin-top: 4rem;
+}   
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+    padding-inline: 1rem;
+}
+
+.turista {
+    width: 30%; 
+    max-width: 400px;
+    right: 0;
+}
+
+
+.form {
+    margin-left: 1rem;
+    min-width: 50%;
+    width: max-content;
+}
+
+@media (max-width: 1008px) {
+
+    .form-content {
+        flex-direction: column;
+    }
+    .turista {
+        width: 80%;
+        max-width: none;
+    }
+    .form {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+

@@ -1,0 +1,158 @@
+/* Tokens básicos (ajusta a tu tema) */
+:root{
+  --pcard-bg: var(--card, #ededed);
+  --pcard-fg: var(--card-foreground, #e7e9ee);
+  --pcard-border: var(--border, rgba(255,255,255,0.12));
+  --pcard-muted: var(--muted-foreground, #9aa3b2);
+  --pcard-primary: var(--principal-color);
+  --pcard-primary-600: var(--secundario-color);
+  --pcard-radius: var(--border-radius);
+  --pcard-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--pcard-shadow);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    --outer-r: 24px;
+    --p-distance: 12px;
+    border: 2px solid var(--pcard-border);
+    background: var(--pcard-bg); 
+  }
+  
+  .carousel-track {
+    display: flex;
+  }
+  
+  /* Card base */
+  .carousel-item {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;     
+    align-items: stretch;            
+    border: 2px solid var(--pcard-border);
+    border-radius: calc(var(--outer-r) - var(--p-distance));
+    background: #fff;
+    overflow: hidden;
+    cursor: grab;
+    min-height: 320px;  
+  }
+  
+  .carousel-item:active { cursor: grabbing; }
+  
+  /* Round mode (opcional) */
+  .carousel-container.round { border: 1px solid #555; }
+  .carousel-item.round {
+    background-color: #0d0716;
+    position: relative;
+    bottom: 0.1em;
+    border: 1px solid #555;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-icon-container {
+    display: inline-flex;
+    height: 28px;
+    width: 28px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  .carousel-icon { height: 16px; width: 16px; color: #060010; }
+  
+  /* Imagen debajo del icono */
+  .carousel-item-imageWrap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 0 16px;         
+    margin-top: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .carousel-item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  /* Contenido de la card */
+  .carousel-item-content {
+    padding: 16px;
+    padding-bottom: 8px;
+    flex: 1;                    
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .carousel-item-title {
+    margin-bottom: 4px;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--principal-color);
+  }
+  .carousel-item-description {
+    font-size: 14px;
+    color: var(--secundario-color);
+    line-height: 1.4;
+  }
+  
+  /* Footer con botón */
+  .carousel-item-footer {
+    padding: 16px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .carousel-button {
+    appearance: none;
+    border: 1px solid var(--principal-color);
+    background: var(--principal-color);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .carousel-button:hover { box-shadow: 0 8px 22px rgba(141, 227, 255, 0.35); background-color: var(--secundario-color); border-color: var(--secundario-color); }
+  .carousel-button:active { transform: translateY(1px); }
+  
+  /* Indicadores */
+  .carousel-indicators-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .carousel-indicators-container.round {
+    position: absolute;
+    z-index: 2;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .carousel-indicators {
+    margin-top: 16px;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+  .carousel-indicator {
+    height: 8px; width: 8px; border-radius: 50%; cursor: pointer; transition: background-color 150ms;
+  }
+  .carousel-indicator.active { background-color: #fff; }
+  .carousel-indicator.inactive { background-color: #555; }
+  

@@ -1,0 +1,84 @@
+/* ===== Tokens ===== */
+:root{
+    --isg-text: #4b3f33;
+    --isg-bg: transparent;
+  }
+  
+  /* Contenedor alto para permitir el scroll */
+  .isg{
+    position: relative;
+    height: 200vh;         /* h-[200vh] */
+    background: var(--isg-bg);
+  }
+  
+  /* Sección sticky que ocupa la ventana */
+  .isg__sticky{
+    position: sticky;
+    top: 0;
+    height: 100vh;         /* h-[100vh] */
+    overflow: hidden;
+  }
+  
+  /* Capa que centra el slot (equivalente a absolute + flex center) */
+  .isg__layer{
+    position: absolute;
+    inset: 0;              /* top/right/bottom/left: 0 */
+    width: 100%;
+    height: 100%;
+    display: flex;         /* items-center justify-center */
+    align-items: center;
+    justify-content: center;
+    will-change: transform, opacity;
+  }
+  
+  /* Marco de cada imagen */
+  .isg__slot{
+    position: relative;    /* permite offsets top/left */
+    display: block;
+  }
+  
+  /* Tamaños y posiciones por índice (traducción directa de tus Tailwind) */
+  .isg__slot--0{ width: 25vw; height: 25vh; }
+  .isg__slot--1{ width: 35vw; height: 30vh; top: -30vh; left: 5vw; }
+  .isg__slot--2{ width: 20vw; height: 55vh; top: -15vh; left: -25vw; }
+  .isg__slot--3{ width: 25vw; height: 25vh; left: 27.5vw; }
+  .isg__slot--4{ width: 20vw; height: 30vh; top: 30vh; left: 5vw; }
+  .isg__slot--5{ width: 30vw; height: 25vh; top: 27.5vh; left: -22.5vw; }
+  .isg__slot--6{ width: 15vw; height: 15vh; top: 22.5vh; left: 25vw; }
+  
+  /* Imagen */
+  .isg__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* object-cover */
+    display: block;
+    border-radius: var(--border-radius);   /* opcional: darle acabado */
+  }
+  
+  /* Contenido final centrado */
+  .isg__content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 48rem;      /* ~ max-w-3xl */
+    margin: 0 auto;        /* mx-auto */
+    padding: 2rem;         /* p-8 */
+    display: flex;         /* flex + center */
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  /* Título/Texto */
+  .isg__heading{
+    color: var(--principal-color);
+    font-weight: 400;              /* font-thin */
+    line-height: 1.3;
+    font-size: 1.5rem;             /* ~ text-2xl */
+    margin: 0;
+  }
+  
+  @media (min-width: 768px){
+    .isg__heading{ font-size: 2rem; } /* ~ md:text-4xl */
+  }
+  
