@@ -6,6 +6,7 @@ import "./tours.css";
 
 import ImmersiveScrollGallery from "../components/ImmersiveScrollGallery";
 import Carousel from "../components/Carrousel";
+import { useNavigate } from "react-router-dom";
 
 // imagenes
 import img1 from "../assets/images/chichenitza1.webp";
@@ -40,6 +41,9 @@ import SplitText from "../components/SplitText";
 import { Footer } from "../components/Footer";
 
 export default function Inicio() {
+
+    const navigate = useNavigate();
+
     return (
         <div>
             <Navbar1 />
@@ -101,49 +105,51 @@ export default function Inicio() {
                                 title: 'Xcaret Group',
                                 description: 'Conoce todos los parques de grupo Xcaret. Xelha, Xavage, Xplor, Xenotes, Xoximilco, Xenses, Xichen.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img3
+                                imageUrl: img3,
+                                slug: 'xcaret-group'
                             },
                             {
                                 id: 2,
                                 title: 'Dolphin & Garrafon',
                                 description: 'Enamorate de los delfines en Dolphin Discovery y el parque Garrafón.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img8
+                                imageUrl: img8,
+                                slug: 'dolphin-garrafon-park'
                             },
                             {
                                 id: 3,
                                 title: 'Ventura Park',
                                 description: 'El parque perfecto para que toda la familia disfrute de un día lleno de actividades en Cancún.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img9
+                                imageUrl: img9,
+                                slug: 'ventura-park'
                             },
                             {
                                 id: 4,
                                 title: 'Selvatica',
                                 description: 'Aquí podrás conocer el mejor tour de tirolesas en Cancún y la Riviera Maya rodeado de la naturaleza.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img10
+                                imageUrl: img10,
+                                slug: 'selvatica-park'
                             },
                             {
                                 id: 5,
                                 title: 'Kantun-Chi',
                                 description: 'Maravíllate con sus majestuosas aguas cristalinas y sumérgete en la tranquilidad y el misterio de este mágico lugar.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img11
+                                imageUrl: img11,
+                                slug: 'kantun-chi-park'
                             },
                             {
                                 id: 6,
                                 title: 'Casa Tortuga',
                                 description: 'Los Cenotes de Casa Tortuga son ideales para nadar, practicar snorkel o bucear desde las alturas.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img12
+                                imageUrl: img12,
+                                slug: 'casa-tortuga-park'
                             },
                         ]}
-                        onViewMore={(item) => {
-                            // aquí navegas con react-router-dom, por ejemplo:
-                            // navigate(`/tours/${item.id}`);
-                            alert(`Ver más: ${item.title}`);
-                        }}
+                        onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
                     />
 
                     <Carousel
@@ -154,35 +160,35 @@ export default function Inicio() {
                                 title: 'Tour Tulum 5x1',
                                 description: 'Conoce estos destinos: Tulum - Coba - Cenote - Aldea Maya & 5th Avenue Playa del Carmen',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img14
+                                imageUrl: img14,
+                                slug: 'tour-tulum-5x1'
                             },
                             {
                                 id: 2,
                                 title: 'Kulkulcan Nights',
                                 description: 'Ten la oportunidad de maravillarte con la maravilla del mundo en un evento nocturno con Kulkulcan Nights.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img13
+                                imageUrl: img13,
+                                slug: 'kulkulcan-nights'
                             },
                             {
                                 id: 3,
                                 title: 'Ek Balam & Cenote Hubiku',
                                 description: 'Ten la oportunidad de recorrer la zona arqueológica de Ek Balam y conocer el Cenote Hubiku.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img15
+                                imageUrl: img15,
+                                slug: 'ek-balam-cenote-hubiku'
                             },
                             {
                                 id: 4,
                                 title: 'Tulum & Casa Tortuga',
                                 description: 'Recorre la zona arqueológica de Tulum en un maravilloso tour y disfruta de Casa Tortuga.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img12
+                                imageUrl: img12,
+                                slug: 'tulum-casa-tortuga'
                             },
                         ]}
-                        onViewMore={(item) => {
-                            // aquí navegas con react-router-dom, por ejemplo:
-                            // navigate(`/tours/${item.id}`);
-                            alert(`Ver más: ${item.title}`);
-                        }}
+                        onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
                     />
 
                     <Carousel
@@ -193,7 +199,8 @@ export default function Inicio() {
                                 title: 'Museo Musa e Isla Mujeres',
                                 description: 'Viaja en Catamarán, conoce el museo subacuatico Musa y recorre por completo Isla Mujeres.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img16
+                                imageUrl: img16,
+                                slug: 'isla-mujeres-catamaran'
                             },
                             {
                                 id: 2,
@@ -224,11 +231,7 @@ export default function Inicio() {
                                 imageUrl: img20
                             },
                         ]}
-                        onViewMore={(item) => {
-                            // aquí navegas con react-router-dom, por ejemplo:
-                            // navigate(`/tours/${item.id}`);
-                            alert(`Ver más: ${item.title}`);
-                        }}
+                        onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
                     />
                 </div>
             </div>
@@ -259,7 +262,8 @@ export default function Inicio() {
                                 title: 'Tour Catamarán Museo Musa, Isla Mujeres',
                                 description: '',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img21
+                                imageUrl: img21,
+                                slug: 'tour-catamaran-musa-isla-mujeres'
                             },
                             {
                                 id: 2,
@@ -283,11 +287,7 @@ export default function Inicio() {
                                 imageUrl: img24
                             },
                         ]}
-                        onViewMore={(item) => {
-                            // aquí navegas con react-router-dom, por ejemplo:
-                            // navigate(`/tours/${item.id}`);
-                            alert(`Ver más: ${item.title}`);
-                        }}
+                        onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
                     />
 
                     <Carousel
@@ -336,11 +336,7 @@ export default function Inicio() {
                                 imageUrl: img1
                             },
                         ]}
-                        onViewMore={(item) => {
-                            // aquí navegas con react-router-dom, por ejemplo:
-                            // navigate(`/tours/${item.id}`);
-                            alert(`Ver más: ${item.title}`);
-                        }}
+                        onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
                     />
 
                     <Carousel
@@ -375,11 +371,7 @@ export default function Inicio() {
                                 imageUrl: img22
                             },
                         ]}
-                        onViewMore={(item) => {
-                            // aquí navegas con react-router-dom, por ejemplo:
-                            // navigate(`/tours/${item.id}`);
-                            alert(`Ver más: ${item.title}`);
-                        }}
+                        onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
                     />
                 </div>
             </div>

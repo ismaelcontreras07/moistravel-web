@@ -1,0 +1,143 @@
+:root{
+    --bg: #0b1220;
+    --bg-hero: #0f172a;           /* slate-950 */
+    --fg: #ffffff;
+    --muted: #9ca3af;
+    --radius: 12px;
+  }
+  
+  /* MAIN */
+  .cmp-main{
+    background:#000;              /* bg-black */
+    min-height:100svh;
+  }
+  
+  /* HERO */
+  .cmp-hero{
+    color: var(--fg);
+    position: relative;
+    height: 100svh;               /* h-screen */
+    width: 100%;
+    background: var(--bg-hero);
+    display: grid;
+    place-content: center;
+    isolation: isolate;           /* para superponer grid pattern */
+  }
+  
+  .cmp-hero-grid{
+    position:absolute; inset:0;
+    /* dos gradientes cruzados, como tailwind bg-[linear-gradient...] */
+    background:
+      linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+      linear-gradient(to bottom,#4f4f4f2e 1px, transparent 1px);
+    background-size: 54px 54px;
+    /* máscara radial en top-center */
+    -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+    z-index: -1;
+  }
+  
+  .cmp-hero-title{
+    font-weight: 600;
+    text-align:center;
+    letter-spacing:-.01em;
+    line-height: 1.2;
+    padding-inline: 2rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);   /* 5xl → 7xl aprox */
+  }
+  
+  /* SECCIÓN GRID */
+  .cmp-section{
+    color: var(--fg);
+    width: 100%;
+    background: var(--bg-hero);
+    padding: 0 0 2rem 0;
+  }
+  
+  .cmp-grid{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+    gap: 8px; /* gap-2 */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 8px;
+  }
+  
+  /* columnas laterales ocupan 4/12 */
+  .cmp-col{
+    grid-column: span 12;
+    display: grid;
+    gap: 8px;
+  }
+  @media (min-width: 1024px){
+    .cmp-col{ grid-column: span 4; }
+  }
+  
+  /* columna central sticky (3 filas) */
+  .cmp-sticky{
+    grid-column: span 12;
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    display: grid;
+    gap: 8px;
+    grid-template-rows: repeat(3, minmax(0,1fr));
+  }
+  @media (min-width: 1024px){
+    .cmp-sticky{ grid-column: span 4; }
+  }
+  
+  /* figuras e imágenes */
+  .cmp-fig{ width:100%; }
+  .cmp-fig--full{ width:100%; height:100%; }
+  .cmp-img{
+    width:100%;
+    height: 24rem;                /* h-96 */
+    object-fit: cover;
+    border-radius: var(--radius);
+    display:block;
+    transition: transform .3s ease, opacity .3s ease, filter .3s ease;
+  }
+  .cmp-img--full{
+    width:100%; height:100%;
+  }
+  
+  /* FOOTER */
+  .cmp-footer{
+    background: var(--bg-hero);
+    padding-bottom: 0;
+  }
+  
+  .cmp-footer-title{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align:center;
+    line-height: 1;
+    margin: 0;
+    font-size: clamp(3rem, 16vw, 16vw);
+    background: linear-gradient(90deg, #9ca3af, #1f2937);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: translateY(5rem);
+    transition: all .3s linear;
+  }
+  
+  .cmp-footer-cap{
+    background:#000;
+    height: 10rem;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+  }
+  
+  /* opcional: estilo si reemplazas sticky por la galería */
+  .cmp-sticky-replace{
+    grid-column: 1 / -1;
+    height: 100%;
+  }
+  

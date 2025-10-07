@@ -12,6 +12,7 @@ export interface CarouselItem {
   description: string;
   icon: React.ReactElement;
   imageUrl?: string; // 👈 nueva propiedad
+  slug?: string;
 }
 
 export interface CarouselProps {
@@ -22,7 +23,7 @@ export interface CarouselProps {
   pauseOnHover?: boolean;
   loop?: boolean;
   round?: boolean;
-  onViewMore?: (item: CarouselItem) => void; // 👈 callback para el botón
+  onViewMore?: (slug: string) => void; 
 }
 
 const DEFAULT_ITEMS: CarouselItem[] = [
@@ -31,35 +32,35 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     title: 'Text Animations',
     description: 'Cool text animations for your projects.',
     icon: <FiFileText className="carousel-icon" />,
-    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80',
   },
   {
     id: 2,
     title: 'Animations',
     description: 'Smooth animations for your projects.',
     icon: <FiCircle className="carousel-icon" />,
-    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80',
   },
   {
     id: 3,
     title: 'Components',
     description: 'Reusable components for your projects.',
     icon: <FiLayers className="carousel-icon" />,
-    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
   },
   {
     id: 4,
     title: 'Backgrounds',
     description: 'Beautiful backgrounds and patterns for your projects.',
     icon: <FiLayout className="carousel-icon" />,
-    imageUrl: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
   },
   {
     id: 5,
     title: 'Common UI',
     description: 'Common UI components are coming soon!',
     icon: <FiCode className="carousel-icon" />,
-    imageUrl: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80',
   }
 ];
 
@@ -218,11 +219,12 @@ export default function Carousel({
 
               {/* Botón Ver más */}
               <div className="carousel-item-footer">
-                <button
-                  className="carousel-button"
-                  onClick={() => onViewMore?.(item)}
-                  aria-label={`Ver más sobre ${item.title}`}
-                >
+              <button
+            className="carousel-button"
+            onClick={() => item.slug && onViewMore?.(item.slug)}
+            aria-label={`Ver más sobre ${item.title}`}
+            disabled={!item.slug} // evita clicks sin slug
+          >
                   Ver más
                 </button>
               </div>
