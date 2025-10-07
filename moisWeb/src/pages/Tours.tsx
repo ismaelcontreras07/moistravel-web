@@ -257,28 +257,28 @@ export default function Inicio() {
                             {
                                 id: 1,
                                 title: 'Tour Catamarán Museo Musa, Isla Mujeres',
-                                description: '',
+                                description: 'Navega en catamarán hacia Isla Mujeres, disfruta barra libre, snorkel en el MUSA y tiempo libre para explorar la isla y sus playas.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img21
                             },
                             {
                                 id: 2,
                                 title: 'Snorkel Arrecife El Farito, Arrecife Manchones & Musa',
-                                description: '',
+                                description: 'Haz snorkel en El Farito, Manchones y el MUSA, y descubre corales, peces y esculturas bajo el mar.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img22
                             },
                             {
                                 id: 3,
                                 title: 'Gruta Ventura',
-                                description: '',
+                                description: 'Adéntrate en la Gruta Ventura y vive una aventura natural única explorando formaciones rocosas, estalactitas y estalagmitas. Disfruta un recorrido lleno de historia, misterio y belleza subterránea.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img23
                             },
                             {
                                 id: 4,
                                 title: 'Conoce al impresionante Tiburon Ballena',
-                                description: '',
+                                description: 'Vive una experiencia única nadando junto al majestuoso tiburón ballena, el pez más grande del mundo. Admira su imponente tamaño y tranquilidad en su hábitat natural.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img24
                             },
@@ -296,42 +296,42 @@ export default function Inicio() {
                             {
                                 id: 1,
                                 title: 'Tour 3x1 Tulum, Coba & Cenote',
-                                description: '',
+                                description: 'Explora las antiguas ciudades mayas de Tulum y Cobá, conoce su historia y arquitectura, y refréscate en las aguas cristalinas de un hermoso cenote.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img14
                             },
                             {
                                 id: 2,
                                 title: 'Tour 3x1 Chichen Itza, Coba & Cenote',
-                                description: '',
+                                description: 'Recorre las majestuosas zonas arqueológicas mayas de Chichén Itzá y Cobá, conoce su historia y maravíllate con su arquitectura. Finaliza el día nadando en las refrescantes aguas de un espectacular cenote. ',
                                 icon: <FiLayers className="carousel-icon"    />,
                                 imageUrl: img2
                             },
                             {
                                 id: 3,
                                 title: 'Tour 4x1 Chichen Itza, Cenote, Valladolid & Mayapan',
-                                description: '',
+                                description: 'Explora Chichén Itzá, Mayapán, un cenote y la ciudad colonial de Valladolid en un tour cultural y natural completo.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img25
                             },
                             {
                                 id: 4,
                                 title: 'Tulum Full Day',
-                                description: '',
+                                description: 'Disfruta un día completo en Tulum, recorriendo sus ruinas mayas, sus playas paradisíacas y explorando la cultura y belleza natural de este icónico destino.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img20
                             },
                             {
                                 id: 5,
                                 title: 'Tour Ek Balam, Rio Lagartos & Las Coloradas',
-                                description: '',
+                                description: 'Descubre Ek Balam, admira los flamencos y la naturaleza en Río Lagartos y maravíllate con las salinas rosadas de Las Coloradas en un tour lleno de cultura y paisajes únicos.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img19
                             },
                             {
                                 id: 6,
                                 title: 'Mega Tour Tulum, Coba & Chichen Itza',
-                                description: '',
+                                description: 'Vive el Mega Tour visitando Tulum, Cobá y Chichén Itzá. Explora impresionantes ruinas mayas y sumérgete en la historia y cultura de la Riviera Maya en un solo día.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img1
                             },
@@ -349,28 +349,28 @@ export default function Inicio() {
                             {
                                 id: 1,
                                 title: 'Descubre Isla Mujeres',
-                                description: '',
+                                description: 'Explora Isla Mujeres, disfruta sus playas de arena blanca, aguas cristalinas y encantadores rincones, ideal para relajarte y vivir el Caribe mexicano al máximo.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img26
                             },
                             {
                                 id: 2,
                                 title: 'Cancún City Tour',
-                                description: '',
+                                description: 'Recorre Cancún y descubre sus principales atractivos, desde playas y centros comerciales hasta su vibrante cultura y vida urbana, todo en un divertido City Tour.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img17
                             },
                             {
                                 id: 3,
                                 title: 'Tour Catamaran Museo Musa, Isla Mujeres',
-                                description: '',
+                                description: 'Navega en catamarán hacia Isla Mujeres, disfruta barra libre, haz snorkel en el MUSA y relájate explorando la isla y sus playas.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img21
                             },
                             {
                                 id: 4,
                                 title: 'Arrecife El Farito, Arrecife Manchones & Musa',
-                                description: '',
+                                description: 'Haz snorkel en El Farito, Manchones y el MUSA, y descubre corales, peces tropicales y esculturas bajo el mar.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img22
                             },
