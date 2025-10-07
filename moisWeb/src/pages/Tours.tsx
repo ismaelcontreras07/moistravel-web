@@ -275,14 +275,14 @@ export default function Inicio() {
                             {
                                 id: 3,
                                 title: 'Gruta Ventura',
-                                description: 'Adéntrate en la Gruta Ventura y vive una aventura natural única explorando formaciones rocosas, estalactitas y estalagmitas. Disfruta un recorrido lleno de historia, misterio y belleza subterránea.',
+                                description: 'Adéntrate en la Gruta Ventura y vive una aventura natural única explorando formaciones rocosas, estalactitas y estalagmitas. Disfruta un recorrido lleno de belleza subterránea.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img23
                             },
                             {
                                 id: 4,
                                 title: 'Conoce al impresionante Tiburon Ballena',
-                                description: 'Vive una experiencia única nadando junto al majestuoso tiburón ballena, el pez más grande del mundo. Admira su imponente tamaño y tranquilidad en su hábitat natural.',
+                                description: 'Vive una experiencia única nadando junto al majestuoso tiburón ballena, el pez más grande del mundo. Admira su imponente tamaño en su hábitat natural.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img24
                             },
@@ -303,7 +303,7 @@ export default function Inicio() {
                             {
                                 id: 2,
                                 title: 'Tour 3x1 Chichen Itza, Coba & Cenote',
-                                description: 'Recorre las majestuosas zonas arqueológicas mayas de Chichén Itzá y Cobá, conoce su historia y maravíllate con su arquitectura. Finaliza el día nadando en las refrescantes aguas de un espectacular cenote. ',
+                                description: 'Recorre las majestuosas zonas arqueológicas mayas de Chichén Itzá y Cobá, conoce su historia y maravíllate con su arquitectura.',
                                 icon: <FiLayers className="carousel-icon"    />,
                                 imageUrl: img2
                             },
@@ -324,7 +324,7 @@ export default function Inicio() {
                             {
                                 id: 5,
                                 title: 'Tour Ek Balam, Rio Lagartos & Las Coloradas',
-                                description: 'Descubre Ek Balam, admira los flamencos y la naturaleza en Río Lagartos y maravíllate con las salinas rosadas de Las Coloradas en un tour lleno de cultura y paisajes únicos.',
+                                description: 'Descubre Ek Balam, admira los flamencos y la naturaleza en Río Lagartos y maravíllate con las salinas rosadas de Las Coloradas.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img19
                             },
@@ -366,7 +366,7 @@ export default function Inicio() {
                             {
                                 id: 4,
                                 title: 'Arrecife El Farito, Arrecife Manchones & Musa',
-                                description: 'Haz snorkel en El Farito, Manchones y el MUSA, y descubre corales, peces tropicales y esculturas bajo el mar.',
+                                description: 'Haz snorkel en El Farito, Manchones y el museo subacuático MUSA, y descubre corales, peces tropicales y esculturas bajo el mar.',
                                 icon: <FiLayers className="carousel-icon" />,
                                 imageUrl: img22
                             },
