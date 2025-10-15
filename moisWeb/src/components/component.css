@@ -1,5 +1,5 @@
 :root{
-    --bg: #0b1220;
+    --bg: #fff;
     --bg-hero: #0f172a;           /* slate-950 */
     --fg: #ffffff;
     --muted: #9ca3af;
@@ -8,7 +8,7 @@
   
   /* MAIN */
   .cmp-main{
-    background:#000;              /* bg-black */
+    background:#fff;              /* bg-black */
     min-height:100svh;
   }
   
@@ -50,7 +50,7 @@
   .cmp-section{
     color: var(--fg);
     width: 100%;
-    background: var(--bg-hero);
+    background: var(--bg);
     padding: 0 0 2rem 0;
   }
   
@@ -73,7 +73,6 @@
     .cmp-col{ grid-column: span 4; }
   }
   
-  /* columna central sticky (3 filas) */
   .cmp-sticky{
     grid-column: span 12;
     position: sticky;
@@ -85,6 +84,9 @@
   }
   @media (min-width: 1024px){
     .cmp-sticky{ grid-column: span 4; }
+  }
+  @media (max-width: 600px){
+    .cmp-sticky{position: static; }
   }
   
   /* figuras e imágenes */
