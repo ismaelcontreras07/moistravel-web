@@ -21,6 +21,27 @@ import islamujeres9 from "../assets/images/islamujeres9.webp"
 import islamujeres10 from "../assets/images/islamujeres10.webp"
 import islamujeres11 from "../assets/images/islamujeres11.webp"
 
+// imagenes tour catamaran
+import tourcatamaran1 from "../assets/images/tourcatamaran1.webp"
+import tourcatamaran2 from "../assets/images/tourcatamaran2.jpg"
+import tourcatamaran3 from "../assets/images/tourcatamaran3.jpg"
+import tourcatamaran4 from "../assets/images/tourcatamaran4.webp"
+import tourcatamaran5 from "../assets/images/tourcatamaran5.jpg"
+import museomusa2 from "../assets/images/museomusa2.webp"
+
+// imagenes arrecifes
+import manchones1 from "../assets/images/manchones1.avif"
+import manchones2 from "../assets/images/manchones2.webp"
+import manchones3 from "../assets/images/manchones3.jpg"
+import manchones4 from "../assets/images/manchones4.jpg"
+import elfarito1 from "../assets/images/elfarito1.jpg"
+import elfarito2 from "../assets/images/elfarito2.jpg"
+import elfarito3 from "../assets/images/elfarito3.jpg"
+import museomusa1 from "../assets/images/museomusa1.webp"
+import museomusa3 from "../assets/images/museomusa3.jpg"
+import museomusa4 from "../assets/images/museomusa4.jpg"
+
+// imagenes parques xcaret
 import xelha1 from "../assets/images/xelha1.jpg"
 import xavage1 from "../assets/images/xavage1.webp"
 import xplor1 from "../assets/images/xplor1.jpeg"
@@ -223,7 +244,21 @@ const TOURS_BY_SLUG: Record<string, Tour> = {
     location: "Quintana Roo, México",
     duration: "7h",
     cover: "/img/tours/isla-hero.jpg",
-    gallery: [islamujeres1, islamujeres2, islamujeres3, islamujeres4, islamujeres5, islamujeres6, islamujeres7, islamujeres8, islamujeres9, islamujeres10, islamujeres11],
+    gallery: [manchones1, manchones2, manchones3, manchones4, elfarito1, elfarito2, elfarito3, museomusa1, museomusa2, museomusa3, museomusa4, tourcatamaran3],
+    price: { amount: 89, currency: "USD", notes: "niños 30% off" },
+    highlights: ["Snorkel en arrecife", "Open bar", "Club de playa", "Pueblo libre"],
+    sections: ["description", "gallery"],
+    cta: { label: "Book", href: "/booking?tour=isla-mujeres-catamaran" },
+  },
+
+  "gruta-ventura": {
+    slug: "gruta-ventura",
+    title: "Gruta Ventura",
+    description: "Adéntrate en la Gruta Ventura y vive una aventura natural única explorando formaciones rocosas, estalactitas y estalagmitas. Disfruta un recorrido lleno de belleza subterránea.",
+    location: "Quintana Roo, México",
+    duration: "7h",
+    cover: "/img/tours/isla-hero.jpg",
+    gallery: [tourcatamaran1, tourcatamaran2, tourcatamaran3, tourcatamaran4, tourcatamaran5, museomusa2, islamujeres7, islamujeres8, islamujeres9, islamujeres10, islamujeres11],
     price: { amount: 89, currency: "USD", notes: "niños 30% off" },
     highlights: ["Snorkel en arrecife", "Open bar", "Club de playa", "Pueblo libre"],
     sections: ["description", "gallery"],
@@ -233,11 +268,11 @@ const TOURS_BY_SLUG: Record<string, Tour> = {
   "tour-catamaran-musa-isla-mujeres": {
     slug: "tour-catamaran-musa-isla-mujeres",
     title: "Tour Catamaran Museo Musa, Isla Mujeres",
-    description: "Navega en catamarán hacia Isla Mujeres, disfruta barra libre, haz snorkel en el MUSA y relájate explorando la isla y sus playas.",
+    description: "Navega por el Caribe Mexicano en un catamarán rumbo a Isla Mujeres, disfrutando del sol y la música a bordo. Sumérgete a hacer snorkel en el Museo Subacuático de Arte (MUSA) y admira sus esculturas bajo el mar. Finaliza explorando la isla, relajándote en sus playas o recorriendo sus encantadoras calles.",
     location: "Quintana Roo, México",
     duration: "7h",
     cover: "/img/tours/isla-hero.jpg",
-    gallery: [islamujeres1, islamujeres2, islamujeres3, islamujeres4, islamujeres5, islamujeres6, islamujeres7, islamujeres8, islamujeres9, islamujeres10, islamujeres11],
+    gallery: [tourcatamaran1, tourcatamaran2, tourcatamaran3, tourcatamaran4, tourcatamaran5, museomusa2, islamujeres7, islamujeres8, islamujeres9, islamujeres10, islamujeres11],
     price: { amount: 89, currency: "USD", notes: "niños 30% off" },
     highlights: ["Snorkel en arrecife", "Open bar", "Club de playa", "Pueblo libre"],
     sections: ["description", "gallery"],

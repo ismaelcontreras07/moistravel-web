@@ -270,21 +270,24 @@ export default function Inicio() {
                                 title: 'Snorkel Arrecife El Farito, Arrecife Manchones & Musa',
                                 description: 'Haz snorkel en El Farito, Manchones y el MUSA, y descubre corales, peces y esculturas bajo el mar.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img22
+                                imageUrl: img22,
+                                slug: 'arrecife-el-farito-arrecife-manchones-musa'
                             },
                             {
                                 id: 3,
                                 title: 'Gruta Ventura',
                                 description: 'Adéntrate en la Gruta Ventura y vive una aventura natural única explorando formaciones rocosas, estalactitas y estalagmitas. Disfruta un recorrido lleno de belleza subterránea.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img23
+                                imageUrl: img23,
+                                slug: 'gruta-ventura'
                             },
                             {
                                 id: 4,
                                 title: 'Conoce al impresionante Tiburon Ballena',
                                 description: 'Vive una experiencia única nadando junto al majestuoso tiburón ballena, el pez más grande del mundo. Admira su imponente tamaño en su hábitat natural.',
                                 icon: <FiLayers className="carousel-icon" />,
-                                imageUrl: img24
+                                imageUrl: img24,
+                                slug: 'tiburon-ballena'
                             },
                         ]}
                         onViewMore={(slug) => navigate(`/tours/${slug}`)} // 👈 navegar aquí
