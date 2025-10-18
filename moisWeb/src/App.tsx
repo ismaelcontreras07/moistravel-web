@@ -5,6 +5,7 @@ import Inicio from './pages/Inicio'
 import Tours from './pages/Tours'
 import TourLayout from './pages/TourLayout'
 import ScrollToTop from './components/ScrollToTop'
+import Transfers from './pages/Transfers'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/tours" element={<Tours />} />
         <Route path="/tours/:slug" element={<TourLayout />} />
+        <Route path="/transfers" element={<Transfers />} />
       </Routes>
     </BrowserRouter>
   )

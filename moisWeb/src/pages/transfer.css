@@ -1,0 +1,37 @@
+.transfers-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+.transfers-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/src/assets/images/cancun2.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: grayscale(0.2) brightness(0.9) blur(1px);
+  transform: translateZ(0);
+  scale: 1.1;
+}
+
+.transfer-text-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.transfer-text {
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-bottom: 1.2rem;
+    width: 95%;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
