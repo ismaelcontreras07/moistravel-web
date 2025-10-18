@@ -1,24 +1,42 @@
 // StickyMosaicGallery.tsx
-import "./component.css"; // reutilizamos las clases .cmp-*
+import "./component.css";
 
 type Props = {
   images: string[];
   className?: string;
+  /** Si lo pasas, limita la galería a ese número; si no, usa images.length */
+  imageNumber?: number;
 };
 
-/**
- * Versión embebible de tu layout:
- * - sin ReactLenis
- * - sin <main>, sin hero, sin footer
- * - solo la sección GRID + STICKY
- */
-export default function StickyMosaicGallery({ images, className = "" }: Props) {
-  // repartimos imágenes en 3 columnas (izq 5, centro 3, der 5). Si faltan, cicla.
-  const pick = (i: number) => images[i % images.length];
+export default function StickyMosaicGallery({
+  images,
+  className = "",
+  imageNumber,
+}: Props) {
+  // 1) Determinar cuántas imágenes renderizar
+  const total = Math.max(0, Math.min(imageNumber ?? images.length, images.length));
+  const pool = images.slice(0, total);
 
-  const left = [0, 1, 2, 3, 4].map(pick);
-  const center = [5, 6, 7].map(pick);
-  const right = [8, 9, 10, 11, 12].map(pick);
+  // 2) Reglas para cuántas imágenes poner en el centro (sticky)
+  //    - 1 si hay muy pocas
+  //    - 2 para medios
+  //    - 3 máximo por estética del sticky
+  const centerCount = Math.min(
+    3,
+    Math.max(1, Math.floor(total * 0.3)) // ~30% al centro
+  );
+
+  // 3) Reparto a izquierda/derecha con el resto
+  const sideTotal = Math.max(0, total - centerCount);
+  const leftCount = Math.ceil(sideTotal / 2);
+  const rightCount = Math.max(0, sideTotal - leftCount);
+
+  const left = pool.slice(0, leftCount);
+  const center = pool.slice(leftCount, leftCount + centerCount);
+  const right = pool.slice(leftCount + centerCount, leftCount + centerCount + rightCount);
+
+  // 4) Fallbacks simples (opcional): si total <= 3, puedes colapsar a 1 columna
+  // if (total <= 3) { /* renderiza una sola columna si prefieres */ }
 
   return (
     <section className={`cmp-section ${className}`}>

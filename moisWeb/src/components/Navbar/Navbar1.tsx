@@ -13,7 +13,7 @@ type NavItem =
 
 const links: NavItem[] = [
   { label: "Inicio", path: "/" },
-  { label: "Transfers", hash: "transfers" },
+  { label: "Transfers", path: "/transfers" },
   { label: "Tours", path: "/tours" },
 ];
 
