@@ -206,7 +206,7 @@ const TOURS_BY_SLUG: Record<string, Tour> = {
     cta: { label: "Book", href: "/booking?tour=isla-mujeres-catamaran" },
   },
 
-    "tulum-coba-chichen-3x1": {
+  "tulum-coba-chichen-3x1": {
     slug: "tulum-coba-chichen-3x1",
     title: "Tour 3x1 Tulum, Coba & Cenote",
     description: "Isla Mujeres te espera con sus aguas turquesas y el majestuoso Sistema Arrecifal Mesoamericano, el segundo más grande del mundo. Este tour incluye snorkel en el colorido arrecife El Farito, un recorrido por la bahía para admirar los distintos tonos del Caribe, comida típica con el delicioso pescado Tikin Xic o pollo a la parrilla, tiempo libre para recorrer el encantador Pueblo Mágico en carrito de golf y terminar relajándote en Playa Norte, una de las mejores playas de México. Un recorrido completo que combina naturaleza, cultura y diversión, ideal para todas las edades.",
@@ -517,7 +517,17 @@ function SectionDescription({ tour }: { tour: Tour }) {
   return (
     <section className="tour__section">
       <SplitText text="Ten una experiencia inolvidable" className="tour__h2" />
-      <p className="tour__description">{tour.description}</p>
+      <SplitText
+        delay={100}
+        duration={0.9}
+        ease="power3.out"
+        splitType="lines"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="start"
+        text={tour.description} className="tour__description" />
     </section>
   );
 }
